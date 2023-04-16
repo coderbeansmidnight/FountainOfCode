@@ -1,0 +1,226 @@
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script> -->
+<!-- <script>alert(1);</script> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Meet Sweet! </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <img
+    src="https://o.remove.bg/downloads/311fba34-c65e-4037-9f29-f9de9e4753d1/Two-Hand-Holding-Each-Other-on-transparent-background-PNG-removebg-preview.png"
+    width=100px height=100px>
+
+  <div class="module mid">
+    <h1 style="color:blue;">Meet Sweet!</h1>
+    <br>
+  </div>
+
+  <div class="btn-group" style="width:100%"><a href="index.html"><button>Home</button></a>
+    <a href=fruitshare.html><button>Activity Ideas </button></a>
+    <a href="ambassador.html">
+    <button>Become An Ambassador!</button> </a>
+  </div>
+
+  <br><br></br></br>
+  <div class="bg"></div>
+
+  
+  
+</head>
+
+  
+
+  
+
+  
+<script>
+  function signGuestbook(fname, lname, email, age, introvert, activity, cookie, flavor, gender) {
+    const review = document.createElement('p');
+  
+    document.getElementById('comments').appendChild(fname);
+    document.getElementById('comments').appendChild(lname);
+    document.getElementById('comments').appendChild(email);
+    document.getElementById('comments').appendChild(age);
+    document.getElementById('comments').appendChild(introvert);
+    document.getElementById('comments').appendChild(activity);
+    document.getElementById('comments').appendChild(cookie);
+    document.getElementById('comments').appendChild(flavor);
+    document.getElementById('comments').appendChild(gender);
+  }
+  
+  function equalsIgnoringCase(text, other) {
+    return text.localeCompare(other, undefined, { sensitivity: 'base' }) === 0;
+  }
+  
+  
+  function takevalue()
+    {
+      var fname=document.getElementById("fname").value;
+      var lname=document.getElementById("lname").value;
+      var email=document.getElementById("email").value;
+      var age=document.getElementById("age").value;
+      var introvert=document.getElementById("introvert").value;
+      var activity=document.getElementById("activity").value;
+      var cookie=document.getElementById("cookie").value;
+      var flavor=document.getElementById("flavor").value;
+      var gender=document.getElementById("gender").value;
+
+      var city=document.getElementById("city").value;
+
+      if (equalsIgnoringCase("Cupertino", city) == 0) 
+          {
+            document.write("Sorry! Meet Sweet does not yet exist in "+city +"! :(");
+          document.write("<br>Check back soon or start your own chapter by applying to be an ambassador!");
+          } 
+      else { 
+        var group = "";
+        if (age == "Teens")
+        {
+          group = "TEENS";
+        }
+        else if (age == "YA")
+        {
+          group = "YOUNG ADULTS";
+        }
+        else if (age == "Adults")
+        {
+          group = "ADULTS";
+        }
+        else 
+        {
+          group = "ADVANCED ADULTS";
+        }
+
+        document.write("Hello " + fname+" "+lname+", <br>");
+        document.write("You have been placed in the " +group+" group. ");
+        
+      }
+
+    }
+
+</script>
+
+<py-script  src=”/quiz.py”>
+
+</py-script>
+  
+<body style="background-color:PaleTurquoise;" >
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+			https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script
+      src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+    <script
+      src = "https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"
+    ></script>
+		<script src = "script.js"></script><!--Script-->
+
+  
+
+<!-- <form action="/action_page.php" target="_blank" method="post"> -->
+  <form>
+  <!--<form  target="_blank" method="post"> -->
+  <br><br>
+  <h2 style="color:coral;">Find A Friend!</h2> 
+  <h4>Info</h4>
+  <p> <strong> First name:</strong> </p>
+  <input type="text" id="fname" name="fname" required><br>
+   <p> <strong> Last name: </strong> </p>
+  <input type="text" id="lname" name="lname" required><br>
+  <p> <strong> Email Id (johndoe@example.com):</strong> </p>
+  <input type="text" id="email" name="email"   pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required><br>
+  <p> <strong> Address:</strong> </p>
+  <input type="text" id="address" name="address" required><br>
+  <p> <strong> City:</strong> </p>
+  <input type="text" id="city" name="city" required><br>
+    
+
+     <p> <strong> What's your age group? </strong> </p>
+ <select name="age" id="age" required>
+   <option value = ""> </option>
+  <option value="Teens">Teens (13-17)</option>
+  <option value="YA">Young Adults (18-27)</option>
+  <option value="Adults">Adults (28-44)</option>
+  <option value="Advanced Adults">Advanced Adults (45+)</option>
+ </select>
+  
+  <!-- </form> -->
+  <br><br>
+  <h4> Questions </h4> 
+   
+  <p> <strong> Would you say you’re more of an extrovert or an introvert? </strong> </p>
+  
+  <!--  <form id = "intro or extro"> -->
+  
+  <select name="introvert" id="introvert" required>
+  <option value = ""> </option>
+  <option value="Introvert">Introvert</option>
+  <option value="Extrovert">Extrovert</option>
+  </select>
+    
+<!-- </form> -->  
+  <p> <strong> Which activity do you enjoy the most? </strong> </p>
+    <select name="activity" id="activity" required>
+    <option value = ""> </option>
+    <option value="Read">Reading</option>
+    <option value="Physical Activity">Physical Activity</option>
+    <option value="Music">Music Related</option>
+    <option value="Watching Movies">Watching Movies</option>
+    <option value="Hanging Out">Hanging Out</option>
+    </select>
+    
+<!-- </form> -->
+  <p> <strong> Would you rather cook or order in?</strong> </p>
+    <select name="cookie" id="cookie" required>
+    <option value = ""> </option>
+    <option value="cook">Cook</option>
+    <option value="order in">Order In</option>
+      <br>
+    </select>
+    
+<!-- </form> -->  
+  <p> <strong> What food flavor profile do you prefer?</strong> </p>
+    <select name="flavor" id="flavor" required>
+    <option value = ""> </option>
+    <option value="sweet">Sweet</option>
+    <option value="salty">Salty</option>
+    <option value="sour">Sour</option>
+    <option value="bland or no flavor">Bland or No Flavor</option>
+      <br>
+    </select>
+
+    <p> <strong> What gender do you identify with?</strong> </p>
+    <select name="gender" id="gender" required>
+    <option value = " "> </option>
+    <option value="fem">Female</option>
+    <option value="mal">Male</option>
+    <option value="nb">Non-Binary</option>
+    <option value="other">Other/Prefer Not To Say</option>
+      <br>
+    </select>
+
+    <br><br>
+    <!-- <input type="submit" value="Submit">  -->
+    <button type="submit" onclick="signUp()" id="enter">Sign Up</button>
+    <br>
+   <br>
+  <br>
+  </form>
+  
+  <body>
+  <!-- Some other HTML... -->
+  <div id="lname">
+  </div>
+</body>
+  
+</body>
+
+</html>

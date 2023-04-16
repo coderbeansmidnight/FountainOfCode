@@ -1,0 +1,144 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.mid h1 {
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-style: normal; font-variant: normal; ;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.people{
+  background-image:url("https://pbs.twimg.com/media/EXK4VKvXkAAOX4V.jpg");
+  width: auto;
+  height: auto;
+}
+.btn-group button {
+  background-color: #00ccff; 
+  border: 1px solid black; 
+  color: white; 
+  padding: 30px 24px; 
+  cursor: pointer; 
+  float: left; 
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400;
+}
+
+.btn-group button:hover{
+  background-color:blue;
+}
+
+button{
+  width: 33.3%
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-size: 50px; font-style: normal; font-variant: normal; font-weight: 400;
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+h3 {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 33.3%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
