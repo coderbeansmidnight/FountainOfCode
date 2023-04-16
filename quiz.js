@@ -105,4 +105,6 @@ const analytics = getAnalytics(app);
     $('#fname').focus();
 }); */
 
+$("#formbutton").click(function() {
+  submit();
 });
